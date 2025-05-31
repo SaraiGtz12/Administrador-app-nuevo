@@ -12,17 +12,23 @@
     <title>Videsa - Login</title>
 
     <!-- Custom fonts for this template-->
-    <link href="{{asset('css/fontawesome/all.min.css')}}" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
+    <script src="https://kit.fontawesome.com/e485076abf.js" crossorigin="anonymous"></script>
     <link href="{{asset('css/sb-admin-2.css')}}" rel="stylesheet">
 
 </head>
 
 <body class="bg-gradient-primary">
+
+    @if ($errors->has('Error'))
+        <div class="alert alert-danger text-center">
+            {{ $errors->first('Error') }}
+        </div>
+    @endif
 
     <div class="container">
 
@@ -41,15 +47,16 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">¡Bienvenido de nuevo!</h1>
                                     </div>
-                                    <form class="user">
+                                    <form action="{{route('IniciarSesion')}}" method="POST" class="user">
+                                        @csrf
                                         <div class="form-group">
                                             <input type="email" class="form-control form-control-user"
-                                                id="exampleInputEmail" aria-describedby="emailHelp"
-                                                placeholder="Correo empresarial...">
+                                                id="UserEmailTxt" name="UserEmailTxt" aria-describedby="emailHelp"
+                                                placeholder="Correo empresarial..." required>
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user"
-                                                id="exampleInputPassword" placeholder="Contraseña">
+                                                id="UserPasswordTxt" name="UserPasswordTxt" placeholder="Contraseña" required>
                                         </div>
                                         
                                         <input type="submit" value="Iniciar Sesión" class="btn btn-primary btn-user btn-block">
