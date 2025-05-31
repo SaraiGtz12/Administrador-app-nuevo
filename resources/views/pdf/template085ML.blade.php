@@ -239,28 +239,30 @@
  <!-- fin de pie de pagina -->
     <main>
         <div class="company-name">
-            Flexico, S. de R.L. de C.V.
+            TEQUILERA MILAGRO, S.A DE C.V
         </div>
 
         <table class="info-table">
             <tr>
                 <td class="col-1">
-                    Carretera Jilotepec–Soyaniquilpan Km 3.5 MZ 2 Lt 1B, Parque industrial Jilotepec,<br>
-                    Jilotepec, Estado de México, C.P. 54240<br>
-                    Resto de país (Rp)
+                    Camino a la Purisima Km, 2 S/N, Predio el Tigre, Atotonilco,<br>
+                    Jalisco, C.P. 47750<br>
+                    Resto de país (RP)
                 </td>
                 <td class="col-2">
                     Número de informe:<br>
                     Orden de servicio:<br>
-                    Fecha de evaluación:<br>
-                    Recepción:<br>
+                    Fecha de muestreo:<br>
+                    Fecha de Recepción:<br>
+                    Fecha de Análisis:<br>
                     Fecha de informe:
                 </td>
                   <td class="col-3">
                     {{ $numero_informe }}<br>
                     {{ $orden_servicio }}<br>
                     {{ $fecha_evaluacion }}<br>
-                    {{ $recepcion }}<br>
+                    {{ $fecha_recepcion }}<br>
+                    {{ $fecha_analisis }}<br>
                     {{ $fecha_informe }}
                  </td>
                 <td class="col-4">
@@ -275,7 +277,7 @@
                 <th colspan="6" style = "text-align: center">Equipo evaluado</th>
             </tr>
             <tr>
-                <td colspan="6" style = "text-align: center">Plancha 3</td>
+                <td colspan="6" style = "text-align: center">Caldera Powermaster</td>
             </tr>
             <tr>
                 <td>Capacidad térmica</td>
@@ -283,11 +285,11 @@
                 <td>GJ/h</td>
                 <td></td>
                 <td>Combustible utilizado</td>
-                <td>Gas natural</td>
+                <td>Combustóleo Pesado</td>
             </tr>
             <tr>
                 <td>Nominal</td>
-                <td>No.Disponible</td>
+                <td>600</td>
                 <td>No.Disponible</td>
                 <td></td>
                 <td></td>
@@ -303,13 +305,13 @@
             </tr>
             <tr>
                 <td>Parámetros Evaluados</td>
-                <td>Cconcentración (ppmv)</td>
+                <td>Resultado (ppmv)</td>
                 <td>Limite Máximo Permisible (ppmv)</td>
                 <td>Comparación (L.M.P.)</td>
                 <td>&plusmn; uE (ppmv)</td>
             </tr>
             <tr>
-                <td>Monoxido de Carbono (CO)</td>
+                <td>Mónoxido de Carbono (CO)</td>
                 <td>20.08</td>
                 <td>No Aplica</td>
                 <td>No Aplica</td>
@@ -317,6 +319,27 @@
             </tr>
             <tr>
                 <td>Óxido de Nitrógeno (NOx)</td>
+                <td>21.73</td>
+                <td>No Aplica</td>
+                <td>No Aplica</td>
+                <td>0.12</td>
+            </tr>
+            <tr>
+                <td>Bióxido de Azufre (So2)</td>
+                <td>21.73</td>
+                <td>No Aplica</td>
+                <td>No Aplica</td>
+                <td>0.12</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>21.73</td>
+                <td>No Aplica</td>
+                <td>No Aplica</td>
+                <td>0.12</td>
+            </tr>
+            <tr>
+                <td>Particulas Suspendidas Totales PST's</td>
                 <td>21.73</td>
                 <td>No Aplica</td>
                 <td>No Aplica</td>
