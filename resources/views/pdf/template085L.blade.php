@@ -239,15 +239,15 @@
  <!-- fin de pie de pagina -->
     <main>
         <div class="company-name">
-            Flexico, S. de R.L. de C.V.
+            TRANSPORTES CASTORES DE BAJA CALIFORNIA S.A DE C.V.
         </div>
 
         <table class="info-table">
             <tr>
                 <td class="col-1">
-                    Carretera Jilotepec–Soyaniquilpan Km 3.5 MZ 2 Lt 1B, Parque industrial Jilotepec,<br>
-                    Jilotepec, Estado de México, C.P. 54240<br>
-                    Resto de país (Rp)
+                    Libramiento Norte No. 18, Barrio Tlacateco, Tepotzotlán,<br>
+                    Estado de México, C.P. 54605<br>
+                    Resto de país (RP)
                 </td>
                 <td class="col-2">
                     Número de informe:<br>
