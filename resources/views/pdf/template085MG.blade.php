@@ -249,13 +249,13 @@
                     Recepción:<br>
                     Fecha de informe:
                 </td>
-                <td class="col-3">
-                    FE085MG/250405-01<br>
-                    25-1347<br>
-                    5-ABRIL-25<br>
-                    6-ABRIL-25<br>
-                    11-ABRIL-25
-                </td>
+                  <td class="col-3">
+                    {{ $numero_informe }}<br>
+                    {{ $orden_servicio }}<br>
+                    {{ $fecha_evaluacion }}<br>
+                    {{ $recepcion }}<br>
+                    {{ $fecha_informe }}
+                 </td>
                 <td class="col-4">
                     <div class="placeholder-image">QR</div>
                 </td>
@@ -351,13 +351,12 @@
         
         </table>
 
-        <div style="margin-top: 100px; text-align: center;">
-            <div style="border-top: 1px solid black; width: 300px; margin: 0 auto; padding-top: 5px;">
-                M. en C. Vidal Loera Yebra
-                <br>
-                Responsable del laboratorio
-            </div>
+        <div style="text-align: center; margin-top: 30px;">
+            <p>Firma Electrónica</p>
+             {!! $qr !!}
+            <p>Escanea para verificar</p>
         </div>
+
 
 
         <!-- esto iria en mi segunda pagina  -->

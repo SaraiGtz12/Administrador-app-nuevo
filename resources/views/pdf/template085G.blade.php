@@ -148,7 +148,7 @@
             border: 1px solid #000;
             border-collapse: collapse;
             margin-top: 20px;
-            margin-bottom: 50px;
+            margin-bottom: 30px;
             font-size: 9px;
         }
 
@@ -169,7 +169,7 @@
             width: 100%;
             border-collapse: collapse;
             font-size: 9x;
-            margin-top: 10px;
+            margin-top: 5px;
         }
 
         .result-table th,
@@ -299,40 +299,40 @@
                 <td>Cconcentración (ppmv)</td>
                 <td>Limite Máximo Permisible (ppmv)</td>
                 <td>Comparación (L.M.P.)</td>
-                <td>&plusmn; uE (ppmv)</td>
+                <td>&plusmn; Ue (ppmv)</td>
             </tr>
             <tr>
                 <td>Monoxido de Carbono (CO)</td>
-                <td>20.08</td>
+                <td>0.61</td>
                 <td>No Aplica</td>
                 <td>No Aplica</td>
-                <td>0.37</td>
+                <td>No Aplica</td>
             </tr>
-            <tr>
-                <td>Óxido de Nitrógeno (NOx)</td>
-                <td>21.73</td>
-                <td>No Aplica</td>
-                <td>No Aplica</td>
-                <td>0.12</td>
-            </tr>
+         
         </table>
 
         <div style="margin-top: 20px; font-size: 7px;">
-            NOTA 1: La incertidumbre estimada UE para CO es 1.86% y para NOx es 0.54%, se expresa con un factor de cobertura k=2 que corresponde aproximadamente 
-            a un nivel de confianza del 95%. Se calcula basandose en la guia para la expresion de incertidumbre en los resultados de las mediciones (NMX-CH-140-IMNC-202)
+            La insertidumbre estimada UE para CO es de 1-93% y se expresa con un facor de cobertura k=2 que corresponde aproximadamente
+            a un nivel de confianza  del 95%. Se calcula basandose en la guia para la expresion de insertidumbre en los resultados de las mediciones 
+            (NMX-CH-140-IMNC-2002).
+           <br>
+            NOTA 1: Los resultados son comparados con base al limite maxico permitible (LMP) correspondiente a la capacidad térmico nominal,
+             tipo de combstible y zona geografica.
             <br>
-            NOTA 2: Para este caso, la zona geografica para el Monoxido de Carbono (CO) se considera: Resto del Pais (RP).
+            NOTA 2: <br>
+            ppmv &nbsp;&nbsp;&nbsp; Partes por millón volumen, igual a micromol por mol (umol/mol)
             <br>
-            NOTA 3:Para este caso, la zona geografica para los Oxidos de Nitrogeno (NOx) se considera: Resto del Pais (RP).
+            GJ/h &nbsp;&nbsp;&nbsp; Giga Joules por hora 
             <br>
-            NOTA 4: ppmv Partes por millon volumen, igual a micromol por mol 
+            C.C &nbsp;&nbsp;&nbsp; Caballos Caldera
             <br>
-            GJ/has      Giga Joules por hora
+            *Para este caso de CO los limites se establecen  como concentraciones en volumen y en base seca, en condiciones de refeerecia de 25&deg;C, 101325 ( 1atm)
+            y 5% de (O2)<br>
+            &nbsp;&nbsp;&nbsp; Se emplea una "Regla de decision de aceptacion simple" como establece el documento "Guildenes on Decision Rules and Stataments of Conformilly" 
             <br>
-            C.C         Caballos Caldera 
-            <br>
-            *Para este caso de CO NOx los limites se establecen como concentraciones en volumen y 
-            base seca, en condiciones de refrencia de 25&deg;C, 101 325 pascales (1 atm) y 5% de (O2)
+            Este informe re´resenta las acaracteristicas de la muestra sometida a prueba. este no podra ser alterado o reproducido excepto en su totalidad con la aprobacion
+            por escrito de Verificaciones Industriales y Desarrollo de proyectos ecologicos, S.A de CV.
+
         </div>
 
 
@@ -342,10 +342,9 @@
             </tr>
             <tr>
                 <td colspan="6" style = "text-align: center; font-size: 8px;">
-                    Debido a que el equipo evaluado no es un equipo de calentamiendo indirecto,
-                    la NOM-085-SEMARNAT-2011 no le aplica, se inclutye el resultado de la contratacion
-                    de los parametros evaluados, unicamente con el objetivo de proporcionar infomracion
-                    relativa a los resultados obtenidos. La evaluacion se realiza a solictud del cliente.
+                   Se realiza el calculo de la concentracion de Monoxido de Carbono (Co), no se realiza la comparativa con la NOM-085-SEMARNAY-2011.
+                   La Evaluacion se realiza a solicitud del cliente, cabe mencionar que el ducto evaluado no cumple con los criterios de la norma NMX-AA-009-SCFI-1993.
+                   Contaminacion atmosfera-fuentes fijas- Determinacion de los gases en un ducto por medio de tubo de pilot.
                 </td>
             </tr>
         
@@ -374,11 +373,11 @@
                     Fecha de informe:
                 </td>
                 <td class="col-2">
-                    FE085MG/250405-01<br>
-                    25-1347<br>
-                    5-ABRIL-25<br>
-                    6-ABRIL-25<br>
-                    11-ABRIL-25
+                    FE085G/250304-01<br>
+                    25-1208<br>
+                    5-MARZO-25<br>
+                    6-MARZO-25<br>
+                    11-MARZO-25
                 </td>
         
             </tr>
@@ -389,19 +388,17 @@
             </tr>
             <tr>
                 <td></td>
-                <td>NOx ppmv</td>
-                <td>CO ppmv</td>
+                <td>co ppmv</td>
                 <td>O2% vol</td>
                 <td>CO2%vol</td>
                 <td>TEMP. En el coducto C</td>
             </tr>
             <tr>
                 <td>Promedio de los valores obtenidos</td>
-                <td>8.59</td>
+                <td>2.13</td>
                 <td>7.80</td>
                 <td>16.42</td>
                 <td>1.88</td>
-                <td>95.1</td>
             </tr>
             <tr>
             <td>Valores corregidos por gas efluente</td>
