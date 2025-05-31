@@ -30,4 +30,8 @@ class Vistas_Controller extends Controller
     public function VistaServiciosRegistrados(){
         return view('Dashboard.ServiciosRegistrados');
     }
+
+    public function VistaServiciosCompletados(){
+        return view('Dashboard.ServiciosCompletados');
+    }
 }

@@ -117,7 +117,7 @@
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Servicios:</h6>
-                        <a class="collapse-item" href="#">Completados</a>
+                        <a class="collapse-item" href="{{route('ServiciosCompletados')}}">Completados</a>
                         <a class="collapse-item" href="{{route('ServiciosRegistrados')}}">Registrados</a>
                         <a class="collapse-item" href="#">Forgot Password</a>
                         <div class="collapse-divider"></div>
@@ -369,6 +369,7 @@
                     @yield('RegistrarCliente')
                     @yield('AgregarServicio')
                     @yield('ServiciosRegistrados')
+                    @yield('ServiciosCompletados')
                 </div>
                 <!-- /.container-fluid -->
 
