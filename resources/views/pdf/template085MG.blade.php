@@ -38,7 +38,7 @@
         .company-name {
             font-weight: bold;
             font-size: 12px;
-            margin-top: 80px;
+            margin-top: 30px;
         }
 
         .info-table {
@@ -269,7 +269,7 @@
     <div style="page-break-before: always;"></div>
     @include('pdf.recursos.headerCaratula')
 
-        <table style="margin-top: 110px;margin-left: auto;">
+        <table style="margin-top: 40px;margin-left: auto;">
             <tr>
             
                 <td class="col-1">
@@ -388,9 +388,10 @@
         </div>
      @include('pdf.recursos.footerCaratula')              
     <div style="page-break-before: always;"></div>
+<!-- paginas 5 -->
     @include('pdf.recursos.headerGeneral')
 
-        <div style="margin-top: 110px">
+        <div style="margin-top: 20px">
            @if ($modo === 'pdf')
                 <!-- Diseño con tabla para compatibilidad en PDF -->
                 <table style="width: 100%; border-collapse: collapse;">

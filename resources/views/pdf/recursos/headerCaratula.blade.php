@@ -45,7 +45,7 @@
 
     
         <div class="divider"></div>
-
+   
         <div class="subtitle"> 
             Comparación con la Norma Oficial Mexicana NOM-085-SEMARNAT-2011, Contaminación atmosférica — Niveles máximos permisibles de emisión de los equipos de combustión de calentamiento indirecto y su medición.
             <br>
