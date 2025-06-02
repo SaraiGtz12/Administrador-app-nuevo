@@ -55,6 +55,48 @@ public function generatePdf085G()
     }
     return view('pdf.template085MG', array_merge($datos, ['modo' => 'web']));
 }
+ public function generatePdf085ML(Request $request)
+{
+    $qr = \QrCode::size(100)->generate('https://tusitio.com/verificar/085MG');
+
+    $datos = [
+        'qr' => $qr,
+        'numero_informe' => 'FE085MG/250405-01',
+        'orden_servicio' => '25-1347',
+        'fecha_evaluacion' => '5-ABRIL-25',
+        'recepcion' => '6-ABRIL-25',
+        'fecha_informe' => '11-ABRIL-25',
+        'mostrar_boton' => true // bandera para mostrar botón solo en navegador
+    ];
+
+    if ($request->has('descargar')) {
+        $pdf = \PDF::loadView('pdf.template085ML', array_merge($datos, ['modo' => 'pdf']));
+        return $pdf->download('plantilla085ML.pdf');
+    }
+    return view('pdf.template085ML', array_merge($datos, ['modo' => 'web']));
+}
+
+ public function generatePdf085L(Request $request)
+{
+    $qr = \QrCode::size(100)->generate('https://tusitio.com/verificar/085MG');
+
+    $datos = [
+        'qr' => $qr,
+        'numero_informe' => 'FE085MG/250405-01',
+        'orden_servicio' => '25-1347',
+        'fecha_evaluacion' => '5-ABRIL-25',
+        'recepcion' => '6-ABRIL-25',
+        'fecha_informe' => '11-ABRIL-25',
+        'mostrar_boton' => true // bandera para mostrar botón solo en navegador
+    ];
+
+    if ($request->has('descargar')) {
+        $pdf = \PDF::loadView('pdf.template085L', array_merge($datos, ['modo' => 'pdf']));
+        return $pdf->download('plantilla085L.pdf');
+    }
+    return view('pdf.template085L', array_merge($datos, ['modo' => 'web']));
+}
+
 
 
 

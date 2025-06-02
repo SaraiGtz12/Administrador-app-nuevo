@@ -22,6 +22,8 @@ Route::get('/services_complete', [Vistas_Controller::class, 'VistaServiciosCompl
 //RUTAS PARA PLANTILLAS PDF
 Route::get('generate085MG', [PdfController::class, 'generatePdf085MG']);
 Route::get('generate085G', [PdfController::class, 'generatePdf085G']);
+Route::get('generate085L', [PdfController::class, 'generatePdf085L']);
+Route::get('generate085ML', [PdfController::class, 'generatePdf085ML']);
 
 
 Route::get('/search',[Vistas_Controller::class, 'Buscar'])->name('Buscar');
