@@ -394,10 +394,12 @@
             </tr>
             <tr>
                 <td></td>
+                <td>NOx (ppmv)</td>
                 <td>co ppmv</td>
                 <td>O2% vol</td>
                 <td>CO2%vol</td>
                 <td>TEMP. En el coducto C</td>
+                
             </tr>
             <tr>
                 <td>Promedio de los valores obtenidos</td>
@@ -405,9 +407,10 @@
                 <td>7.80</td>
                 <td>16.42</td>
                 <td>1.88</td>
+                <td></td>
             </tr>
             <tr>
-            <td>Valores corregidos por gas efluente</td>
+                <td>Valores corregidos por gas efluente</td>
                 <td>8.06</td>
                 <td>7.45</td>
                 <td>16.33</td>
@@ -415,7 +418,7 @@
                 <td>N/A</td>
             </tr>
             <tr>
-            <td>Valores corregidos al 5% de O2</td>
+                <td>Valores corregidos al 5% de O2</td>
                 <td>21.73</td>
                 <td>20.08</td>
                 <td>N/A</td>
