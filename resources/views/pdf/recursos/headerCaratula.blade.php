@@ -25,27 +25,27 @@
             text-align: justify;
             margin-bottom: 20px;
         }
+        .divider {
+            border-top: 1px solid black;
+            margin: 5px 0;
+        }
 </style>
 <div class="top-section">
 
-            <div class="logo">
-                @if ($modo === 'pdf')
- 
-                    <img style="width: 100px;" src="{{ public_path('img/logo.png') }}">
-                @else
-               
-                  <img src="{{ asset('img/logo.png') }}" width="100">
+    <div class="logo">
+        @if ($modo === 'pdf')
+            <img style="width: 100px;" src="{{ public_path('img/logo.png') }}">
+        @else       
+           <img src="{{ asset('img/logo.png') }}" width="100">
+        @endif
+    </div>
 
-                @endif
-            </div>
-
-            <div class="title">Informe de Resultados</div>
-            
-        </div>
+    <div class="title">Informe de Resultados</div>        
+</div>
 
     
         <div class="divider"></div>
-
+   
         <div class="subtitle"> 
             Comparación con la Norma Oficial Mexicana NOM-085-SEMARNAT-2011, Contaminación atmosférica — Niveles máximos permisibles de emisión de los equipos de combustión de calentamiento indirecto y su medición.
             <br>

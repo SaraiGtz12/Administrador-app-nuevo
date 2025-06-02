@@ -13,17 +13,6 @@
                 color: #333;
             }
         }
-
-
-        footer {
-            position: fixed;
-            bottom: -20px;
-            left: 0;
-            right: 0;
-            height: 100px;
-            font-size: 9px;
-            text-align: center;
-        }
         .page:before {
             content: counter(page);
         }
@@ -36,14 +25,9 @@
             text-align: right;
             font-size: 9px;
         }
-
-        .divider {
-            border-top: 1px solid black;
-            margin: 5px 0;
-        }
         main {
             margin-top: 0;
-            margin-bottom: 5px; /* Igual que el espacio del footer */
+            margin-bottom: 0;
         }
       
 
@@ -51,19 +35,10 @@
             font-family: Arial, sans-serif;
             font-size: 9px;
         }
-
-       
-
-        .divider {
-            border-top: 1px solid black;
-            margin: 10px 0;
-        }
-
-
         .company-name {
             font-weight: bold;
             font-size: 12px;
-            margin-top: 80px;
+            margin-top: 30px;
         }
 
         .info-table {
@@ -160,62 +135,8 @@
         </form>
 
     @endif
- <!-- inicio de encabezado-->
-    <!-- <header>
-        <div class="top-section">
-
-            <div class="logo">
-                @if ($modo === 'pdf')
- 
-                    <img style="width: 100px;" src="{{ public_path('img/logo.png') }}">
-                @else
-               
-                  <img src="{{ asset('img/logo.png') }}" width="100">
-
-                @endif
-            </div>
-
-            <div class="title">Informe de Resultados</div>
-            
-        </div>
-
-    
-        <div class="divider"></div>
-
-        <div class="subtitle"> 
-            Comparación con la Norma Oficial Mexicana NOM-085-SEMARNAT-2011, Contaminación atmosférica — Niveles máximos permisibles de emisión de los equipos de combustión de calentamiento indirecto y su medición.
-            <br>
-            Para equipos con capacidad térmica nominal mayor de 5.3 G/J o 150 C.C combustible gaseoso
-        </div>
-    </header> -->
-    <!-- fin de encabezado-->
-     
- <!-- pie de pagina-->
-    <footer>
-        <div>
-            <div style="text-align: left;">
-                FC-AAR-006<br>
-                Revisión: 23
-            </div>
-            <div style="text-align: right;">
-                Página <span class="page"></span> de <span class="topage"></span>
-            </div>
-        </div>
-
-        <hr style="border: 0; border-top: 2px solid black; margin: 10px 0;">
-        <hr style="border: 0; border-top: 2px solid black; margin: 0 0 10px 0;">
-
-        <div style="text-align: center; font-size: 9px; line-height: 1.4;">
-            <strong>Verificaciones Industriales y Desarrollo de Proyectos Ecológicos S.A. de C.V.</strong><br>
-            Revolución No.356, Col. La Romana &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; e-mail: verificaciones@prodigy.net.mx<br>
-            CP. 54030, Tlalnepantla, Estado de México &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; www.videsa.net<br>
-            Tel: 01(55) 5565-5044, con 13 líneas
-        </div>
-    </footer>
-
- <!-- fin de pie de pagina -->
     <main>
-        @include('pdf.headerCaratula')
+        @include('pdf.recursos.headerCaratula')
         <div class="company-name">
             Flexico, S. de R.L. de C.V.
         </div>
@@ -342,13 +263,13 @@
             <p>Escanea para verificar</p>
         </div>
 
-
+    @include('pdf.recursos.footerCaratula')
 
         <!-- esto iria en mi segunda pagina  -->
     <div style="page-break-before: always;"></div>
-    @include('pdf.headerCaratula')
+    @include('pdf.recursos.headerCaratula')
 
-        <table style="margin-top: 110px;margin-left: auto;">
+        <table style="margin-top: 40px;margin-left: auto;">
             <tr>
             
                 <td class="col-1">
@@ -465,10 +386,12 @@
             Método 7 EPA-2008&nbsp;Determinación de óxidos de nitrógeno, en los gases que fluyen por un conducto.
             Método de quimiluminiscencia
         </div>
-
+     @include('pdf.recursos.footerCaratula')              
     <div style="page-break-before: always;"></div>
+<!-- paginas 5 -->
+    @include('pdf.recursos.headerGeneral')
 
-        <div style="margin-top: 110px">
+        <div style="margin-top: 20px">
            @if ($modo === 'pdf')
                 <!-- Diseño con tabla para compatibilidad en PDF -->
                 <table style="width: 100%; border-collapse: collapse;">
@@ -569,7 +492,6 @@
 
                         </tbody>
                     </table>
-
                     <div style="width: 50%; display: flex; flex-direction: column; gap: 20px; margin-top: 40px;">
                         <canvas id="graficaCO" width="400" height="200"></canvas>
                         <canvas id="graficaO2" width="400" height="200"></canvas>
@@ -577,19 +499,9 @@
                     </div>
                 </div>
             @endif
-
-
         </div>
-
-
-
-
-
+    @include('pdf.recursos.footerGeneral')  
     </main>
-        
-
-
-
 <script>
     const analitoData = {
         no: @json($analito_no),
@@ -598,10 +510,7 @@
         co2: @json($analito_CO2)
     };
 </script>
-    
 <script src="{{ asset('js/pdf/grafica-resultados.js') }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-
 </body>
 </html>
