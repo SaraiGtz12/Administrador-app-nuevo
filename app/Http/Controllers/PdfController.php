@@ -45,7 +45,7 @@ public function generatePdf085G(Request $request)
             'recepcion' => '6-ABRIL-25',
             'fecha_informe' => '11-ABRIL-25',
 
-            'grafica_co' => $request->input('grafica_co'),  // debe coincidir con el name del input
+            'grafica_co' => $request->input('grafica_co'), 
             'grafica_o2' => $request->input('grafica_o2'),
             'grafica_co2' => $request->input('grafica_co2'),
    
@@ -54,11 +54,11 @@ public function generatePdf085G(Request $request)
         ];
 
         // Datos de la tabla de analitos
-        $analito_no = [1, 2, 3];
-        $analito_CO = [24, 27, 28];
-        $analito_O2 = [4.42, 4.42, 4.22];
-        $analito_CO2 = [9.80, 11.10, 11.13];
-        $analito_temp = [188.4, 191.5, 190.5];
+        $analito_no = [1, 2, 3, 4, 5, 6, 7,8,9,10];
+        $analito_CO = [24, 27, 28, 24, 26, 26,28,27,26,25];
+        $analito_O2 = [4.42, 4.42, 4.22, 4.22, 4.34, 4.48,4.35,4.34,4.41,4.23];
+        $analito_CO2 = [9.80, 11.10, 11.13, 11.43, 10.42, 11.25,9.45,11.55,10.89,10.68];
+        $analito_temp = [188.4, 191.5, 190.5, 193.3, 192.7,192.2,191.5,189.3,188.6,192.4];
 
         // Agrupamos todos los datos en un solo array para pasar a la vista
         $datos_analito = [
