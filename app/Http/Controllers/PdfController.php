@@ -9,30 +9,27 @@ use SimpleSoftwareIO\QrCode\Facades\QrCode; //ESTA LIBRERIA ES PARA LA FIRMA ELE
 
 class PdfController extends Controller
 {
-    /* SOLO VISTA
-    public function generatePdf()
-{
-    return view('pdf.template');
-}
-public function generatePdf085MG()
-    {
-         $qr = QrCode::size(100)->generate('https://tusitio.com/verificar/085MG');
-           $datos = [
-              'qr' => $qr,
-              'numero_informe' => 'FE085MG/250405-01',
-              'orden_servicio' => '25-1347',
-              'fecha_evaluacion' => '5-ABRIL-25',
-              'recepcion' => '6-ABRIL-25',
-              'fecha_informe' => '11-ABRIL-25',
-            ];
-         return view('pdf.template085MG', $datos);
-    }
-*/
+ 
 
-public function generatePdf085G()
+public function generatePdf085G(Request $request)
 {
-    $pdf = Pdf::loadView('pdf.template085G');
-    return $pdf->download('plantilla085G.pdf');
+    $qr = \QrCode::size(100)->generate('https://tusitio.com/verificar/085G');
+
+    $datos = [
+        'qr' => $qr,
+        'numero_informe' => 'FE085G/250405-01',
+        'orden_servicio' => '25-1347',
+        'fecha_evaluacion' => '5-ABRIL-25',
+        'recepcion' => '6-ABRIL-25',
+        'fecha_informe' => '11-ABRIL-25',
+        'mostrar_boton' => true // bandera para mostrar botón solo en navegador
+    ];
+
+    if ($request->has('descargar')) {
+        $pdf = \PDF::loadView('pdf.template085G', array_merge($datos, ['modo' => 'pdf']));
+        return $pdf->download('plantilla085G.pdf');
+    }
+    return view('pdf.template085G', array_merge($datos, ['modo' => 'web']));
 }
 
  public function generatePdf085MG(Request $request)

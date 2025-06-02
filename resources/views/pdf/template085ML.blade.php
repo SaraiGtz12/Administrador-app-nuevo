@@ -185,7 +185,7 @@
 </head>
 <body>
     @if ($modo === 'web')
-        <form action="{{ url('/generate085MG') }}" method="GET" style="text-align: right;">
+        <form action="{{ url('/generate085ML') }}" method="GET" style="text-align: right;">
             <input type="hidden" name="descargar" value="1">
             <button type="submit">Descargar PDF</button>
         </form>
