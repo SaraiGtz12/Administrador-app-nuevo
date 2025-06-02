@@ -388,7 +388,15 @@
         </div>
      @include('pdf.recursos.footerCaratula')              
     <div style="page-break-before: always;"></div>
-<!-- paginas 5 -->
+    <!-- paginas 3 -->
+    @include('pdf.recursos.headerGeneral')
+    @include('pdf.recursos.footerGeneral')              
+    <div style="page-break-before: always;"></div>
+     <!-- paginas 4 -->
+    @include('pdf.recursos.headerGeneral')
+    @include('pdf.recursos.footerGeneral')  
+    <div style="page-break-before: always;"></div>
+    <!-- paginas 5 -->
     @include('pdf.recursos.headerGeneral')
 
         <div style="margin-top: 20px">
@@ -500,6 +508,15 @@
                 </div>
             @endif
         </div>
+    @include('pdf.recursos.footerGeneral')  
+    <div style="page-break-before: always;"></div>
+
+     <!-- paginas 6 -->
+    @include('pdf.recursos.headerGeneral')
+    @include('pdf.recursos.footerGeneral')              
+    <div style="page-break-before: always;"></div>
+     <!-- paginas 7 -->
+    @include('pdf.recursos.headerGeneral')
     @include('pdf.recursos.footerGeneral')  
     </main>
 <script>
