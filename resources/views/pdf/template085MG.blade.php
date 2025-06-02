@@ -540,6 +540,22 @@
                                             <td style="border: 1px solid black; padding: 6px;">{{ $analito_temp[$i] }}</td>
                                         </tr>
                                     @endforeach
+                                    <tr>
+                                        <td style="border: 1px solid black; padding: 6px; font-weight: bold;">Promedio</td>
+                                        <td style="border: 1px solid black; padding: 6px;">
+                                            {{ number_format(array_sum($analito_CO) / count($analito_CO), 2) }}
+                                        </td>
+                                        <td style="border: 1px solid black; padding: 6px;">
+                                            {{ number_format(array_sum($analito_O2) / count($analito_O2), 2) }}
+                                        </td>
+                                        <td style="border: 1px solid black; padding: 6px;">
+                                            {{ number_format(array_sum($analito_CO2) / count($analito_CO2), 2) }}
+                                        </td>
+                                        <td style="border: 1px solid black; padding: 6px;">
+                                            {{ number_format(array_sum($analito_temp) / count($analito_temp), 2) }}
+                                        </td>
+                                    </tr>
+
                                 </tbody>
                             </table>
                         </td>
@@ -577,6 +593,22 @@
                                     <td style="border: 1px solid black; padding: 6px;">{{ $analito_temp[$i] }}</td>
                                 </tr>
                             @endforeach
+                            <tr>
+                                <td style="border: 1px solid black; padding: 6px; font-weight: bold;">Promedio</td>
+                                <td style="border: 1px solid black; padding: 6px;">
+                                    {{ number_format(array_sum($analito_CO) / count($analito_CO), 2) }}
+                                </td>
+                                <td style="border: 1px solid black; padding: 6px;">
+                                    {{ number_format(array_sum($analito_O2) / count($analito_O2), 2) }}
+                                </td>
+                                <td style="border: 1px solid black; padding: 6px;">
+                                    {{ number_format(array_sum($analito_CO2) / count($analito_CO2), 2) }}
+                                </td>
+                                <td style="border: 1px solid black; padding: 6px;">
+                                    {{ number_format(array_sum($analito_temp) / count($analito_temp), 2) }}
+                                </td>
+                            </tr>
+
                         </tbody>
                     </table>
 
