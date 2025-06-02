@@ -1,6 +1,6 @@
 @extends('../Layout/Layout')
 @section('AgregarServicio')
-    <div class="container rounded shadow p-4 mb-4">
+    <div class="container rounded shadow p-4 mb-4 bg-white">
         <div class="text-center">
             <h3>Registrar Orden de Servicio</h3>
         </div>
@@ -15,15 +15,25 @@
                         <span class="form-label">Razón Social</span>
                         <input type="text" name="RazonSocial" id="RazonSocial" class="form-control" required>
                     </div>
-                    <div class="mb-2">
-                        <span class="form-label">Calle y Número</span>
-                        <input type="text" name="Calle" id="Calle" class="form-control" required>
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-2">
+                                <span class="form-label">Calle y Número</span>
+                                <input type="text" name="Calle" id="Calle" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="mb-2">
+                                <span class="form-label">Referencias</span>
+                                <input type="text" name="Referencias" id="Referencias" class="form-control" required>
+                            </div>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col">
                             <div class="mb-2">
-                                <span class="form-label">Código Postal</span>
-                                <input type="text" name="CP" id="CP" class="form-control" required>
+                                <span class="form-label">Colonia</span>
+                                <input type="text" name="Colonia" id="Colonia" class="form-control" required>
                             </div>
                             <div class="mb-2">
                                 <span class="form-label">Nombre del Responsable</span>
@@ -62,7 +72,7 @@
                     <h6 class="m-0 font-weight-bold text-primary">Datos del Servicio</h6>
                 </div>
                 <div class="card-body">
-                    <div class="row">
+                    <div class="row mb-3">
                         <div class="col">
                             <div class="mb-2">
                                 <span>Número de Servicios</span>
@@ -77,10 +87,7 @@
                         </div>
                     </div>
                     <div id="ContenidoServicio"></div>
-                    <div class="mb-4">
-                        <span>Descripción del Servicio</span>
-                        <textarea name="Descripcion" id="Descripcion" class="form-control" rows="4"></textarea>
-                    </div>
+                    
                 </div>
             </div>
             <div class="card mb-2">
@@ -92,9 +99,16 @@
                         <div class="col">
                             <div class="mb-2">
                                 <span>Fecha de Muestreo</span>
-                                <input type="date" name="FechaMuestreo" id="FechaMuestreo" class="form-control">
+                                <input type="date" name="FechaMuestreo" id="FechaMuestreo" class="form-control" required>
                             </div>
                         </div>
+                        <div class="col">
+                            <div class="mb-2">
+                                <span>Muestreador Responsable</span>
+                                <input type="text" name="Muestreador" id="Muestreador" class="form-control" required>
+                            </div>
+                        </div>
+                        <!--
                         <div class="col">
                             <div class="mb-2">
                                 <span>Cantidad de Muestreadores</span>
@@ -107,10 +121,11 @@
                                 <button class="btn btn-info" type="button" id="BuscarMuestreador">Buscar Muestreador</button>
                             </div>
                         </div>
+                        -->
                     </div>
                     <div id="Muestreadores"></div>
                     
-                    <div class="d-grid">
+                    <div class="d-grid mt-4">
                         <input type="submit" value="Registrar" class="btn btn-primary">
                     </div>
                 </div>
@@ -121,5 +136,5 @@
 @endsection
 
 @section('Scripts')
-    <script src="{{asset('js/Formularios/srcipt.js')}}"></script>
+    <script src="{{asset('js/Formularios/script.js')}}"></script>
 @endsection

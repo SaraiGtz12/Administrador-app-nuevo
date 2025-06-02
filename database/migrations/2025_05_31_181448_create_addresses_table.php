@@ -13,12 +13,15 @@ return new class extends Migration
     {
         Schema::create('addresses', function (Blueprint $table) {
             $table->id('idAddress');
-            $table->string('Street');
-            $table->string('Neighborhood');
-            $table->string('City');
-            $table->string('State');
-            $table->string('References');
+            $table->string('street');
+            $table->string('neighborhood');
+            $table->string('city');
+            $table->string('state');
+            $table->string('references');
+            $table->unsignedBigInteger('clientId');
             $table->timestamps();
+
+            $table->foreign('clientId')->references('idClient')->on('clients');
         });
     }
 

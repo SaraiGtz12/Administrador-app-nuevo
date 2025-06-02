@@ -14,15 +14,15 @@ return new class extends Migration
         Schema::create('service_orders', function (Blueprint $table) {
             $table->id('idServiceOrder');
             $table->string('serviceOrder');
-            $table->string('AssignedTo');
+            $table->string('responsible');
+            $table->string('phoneNumber');
+            $table->unsignedBigInteger('assignedTo');
             $table->unsignedBigInteger('userId');
-            $table->unsignedBigInteger('clientId');
             $table->unsignedBigInteger('addressId');
             $table->timestamps();
 
-            $table->foreign('userId')->references('idUser')->on('users')->onDelete('set null');
-            $table->foreign('clientId')->references('idClient')->on('clients')->onDelete('set null');
-            $table->foreign('addressId')->references('idAddress')->on('Addresses')->onDelete('set null');
+            $table->foreign('userId')->references('idUser')->on('users');
+            $table->foreign('addressId')->references('idAddress')->on('addresses');
         });
     }
 
