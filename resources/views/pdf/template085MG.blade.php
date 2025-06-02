@@ -183,13 +183,21 @@
 
     </style>
 </head>
+
 <body>
     @if ($modo === 'web')
-        <form action="{{ url('/generate085MG') }}" method="GET" style="text-align: right;">
+        <form id="formImagenesGraficas" action="{{ url('/generate085MG') }}" method="POST" style="text-align: right;">
+            @csrf
             <input type="hidden" name="descargar" value="1">
+            <input type="hidden" name="grafica_co" id="inputGraficaCO">
+            <input type="hidden" name="grafica_o2" id="inputGraficaO2">
+            <input type="hidden" name="grafica_co2" id="inputGraficaCO2">
             <button type="submit">Descargar PDF</button>
         </form>
+
     @endif
+    
+
   
 
  <!-- inicio de encabezado-->
@@ -367,7 +375,7 @@
 
 
         <!-- esto iria en mi segunda pagina  -->
-         <div style="page-break-before: always;"></div>
+    <div style="page-break-before: always;"></div>
 
         <table style="margin-top: 110px;margin-left: auto;">
             <tr>
@@ -486,11 +494,67 @@
             Método 7 EPA-2008&nbsp;Determinación de óxidos de nitrógeno, en los gases que fluyen por un conducto.
             Método de quimiluminiscencia
         </div>
+
+    <div style="page-break-before: always;"></div>
+        <div style="display: flex; gap: 40px; align-items: start;">
+            <table style="margin-top: 110px; border-collapse: collapse;">
+                <tr>
+                    <th colspan="5" style="text-align: center">ANALITO</th>
+                </tr>
+                <tr>
+                    <td>No.</td>
+                    <td>CO (ppmv)</td>
+                    <td>O2%</td>
+                    <td>CO2 %</td>
+                    <td>TEMP, En el conducto, °C</td>
+                </tr>
+               @foreach ($analito_no as $i => $no)
+                    <tr>
+                        <td>{{ $no }}</td>
+                        <td>{{ $analito_CO[$i] }}</td>
+                        <td>{{ $analito_O2[$i] }}</td>
+                        <td>{{ $analito_CO2[$i] }}</td>
+                        <td>{{ $analito_temp[$i] }}</td>
+                    </tr>
+                @endforeach
+            </table>
+
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+                <canvas id="graficaCO" width="400" height="200"></canvas>
+                <canvas id="graficaO2" width="400" height="200"></canvas>
+                <canvas id="graficaCO2" width="400" height="200"></canvas>
+                
+            </div>
+            @if ($modo === 'pdf')
+                <div style="display: flex; justify-content: space-between; margin-top: 40px;">
+                    <img src="{{ $grafica_co }}" width="300">
+                    <img src="{{ $grafica_o2 }}" width="300">
+                    <img src="{{ $grafica_co2 }}" width="300">
+                </div>
+            @endif
+
+        </div>
+
+
+
+
     </main>
         
 
 
+
+<script>
+    const analitoData = {
+        no: @json($analito_no),
+        co: @json($analito_CO),
+        o2: @json($analito_O2),
+        co2: @json($analito_CO2)
+    };
+</script>
     
+<script src="{{ asset('js/pdf/grafica-resultados.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 
 </body>
 </html>

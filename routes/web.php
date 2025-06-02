@@ -17,4 +17,4 @@ Route::get('/agregar_servicio', [Vistas_Controller::class, 'RegistrarServicio'])
 Route::get('generate085MG', [PdfController::class, 'generatePdf085MG']);
 Route::get('generate085G', [PdfController::class, 'generatePdf085G']);
 Route::get('generate085L', [PdfController::class, 'generatePdf085L']);
-Route::get('generate085ML', [PdfController::class, 'generatePdf085ML']);
+Route::post('generate085MG', [PdfController::class, 'generatePdf085MG']);
