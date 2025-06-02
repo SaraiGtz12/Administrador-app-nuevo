@@ -183,6 +183,12 @@
     </style>
 </head>
 <body>
+     @if ($modo === 'web')
+        <form action="{{ url('/generate085G') }}" method="GET" style="text-align: right;">
+            <input type="hidden" name="descargar" value="1">
+            <button type="submit">Descargar PDF</button>
+        </form>
+    @endif
   
 
  <!-- inicio de encabezado-->
@@ -250,11 +256,11 @@
                     Fecha de informe:
                 </td>
                 <td class="col-3">
-                    FE085MG/250405-01<br>
-                    25-1347<br>
-                    5-ABRIL-25<br>
-                    6-ABRIL-25<br>
-                    11-ABRIL-25
+                    {{ $numero_informe }}<br>
+                    {{ $orden_servicio }}<br>
+                    {{ $fecha_evaluacion }}<br>
+                    {{ $recepcion }}<br>
+                    {{ $fecha_informe }}
                 </td>
                 <td class="col-4">
                     <div class="placeholder-image">QR</div>
