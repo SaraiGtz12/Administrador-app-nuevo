@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Rol;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class Vistas_Controller extends Controller
@@ -20,6 +22,7 @@ class Vistas_Controller extends Controller
     }
 
     public function RegistrarServicio(){
+        
         return view('Dashboard.AgregarServicio');
     }
 
@@ -33,5 +36,10 @@ class Vistas_Controller extends Controller
 
     public function VistaServiciosCompletados(){
         return view('Dashboard.ServiciosCompletados');
+    }
+
+    public function VistaAgregarUsuarios(){
+        $roles = Rol::all();
+        return view('Dashboard.AgregarUsuarios', compact('roles'));
     }
 }

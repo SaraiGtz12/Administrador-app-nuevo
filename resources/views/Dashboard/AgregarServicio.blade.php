@@ -1,6 +1,6 @@
 @extends('../Layout/Layout')
 @section('AgregarServicio')
-    <div class="container rounded shadow p-4 mb-4">
+    <div class="container rounded shadow p-4 mb-4 bg-white">
         <div class="text-center">
             <h3>Registrar Orden de Servicio</h3>
         </div>
@@ -110,7 +110,7 @@
                     </div>
                     <div id="Muestreadores"></div>
                     
-                    <div class="d-grid">
+                    <div class="d-grid mt-4">
                         <input type="submit" value="Registrar" class="btn btn-primary">
                     </div>
                 </div>
@@ -121,5 +121,5 @@
 @endsection
 
 @section('Scripts')
-    <script src="{{asset('js/Formularios/srcipt.js')}}"></script>
+    <script src="{{asset('js/Formularios/script.js')}}"></script>
 @endsection

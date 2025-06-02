@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class ServiceOrdersController extends Controller
 {
-    public function RegistrarOrden(){
+    public function RegistrarOrden(Request $request){
         
     }
 }
