@@ -5,7 +5,7 @@
     <title>Informe PDF</title>
     <style>
          @page {
-            margin: 100px 50px 120px 50px;
+            margin: 10px 40px 40px 40px;
 
              @bottom-center {
                 content: "Página " counter(page) " de " counter(pages);
@@ -14,18 +14,10 @@
             }
         }
 
-       header {
-            position: fixed;
-            top: -80px;
-            left: 0;
-            right: 0;
-            height: 100px;
-            text-align: center;
-        }
 
         footer {
             position: fixed;
-            bottom: -100px;
+            bottom: -20px;
             left: 0;
             right: 0;
             height: 100px;
@@ -50,8 +42,8 @@
             margin: 5px 0;
         }
         main {
-            margin-top: 100px;
-            margin-bottom: 120px; /* Igual que el espacio del footer */
+            margin-top: 0;
+            margin-bottom: 5px; /* Igual que el espacio del footer */
         }
       
 
@@ -62,28 +54,16 @@
 
        
 
-        .title {
-            text-align: center;
-            font-size: 16px;
-            font-weight: bold;
-            margin-top: 110px;
-        }
-
         .divider {
             border-top: 1px solid black;
             margin: 10px 0;
         }
 
-        .subtitle {
-            font-size: 9px;
-            text-align: justify;
-            margin-bottom: 20px;
-        }
 
         .company-name {
             font-weight: bold;
             font-size: 12px;
-            margin-top: 120px;
+            margin-top: 80px;
         }
 
         .info-table {
@@ -126,27 +106,7 @@
             font-size: 8px;
             border: 1px solid #999;
         }
-        .top-section {
-            text-align: left;
-            @if ($modo === 'web')
-            margin-top: 90px;
-            @else
-            margin-top: 0;
-            @endif
-        }
-
-        .logo {
-            margin-bottom: 5px;
-           
-        }
-
-        .title {
-            font-size: 12px;
-            font-weight: bold;
-            margin-top: 0;
-            margin-bottom: 10px;
-            text-align: left;
-        }
+   
 
         .evaluated-equipment-table {
             width: 100%;
@@ -200,12 +160,8 @@
         </form>
 
     @endif
-    
-
-  
-
  <!-- inicio de encabezado-->
-    <header>
+    <!-- <header>
         <div class="top-section">
 
             <div class="logo">
@@ -231,7 +187,7 @@
             <br>
             Para equipos con capacidad térmica nominal mayor de 5.3 G/J o 150 C.C combustible gaseoso
         </div>
-    </header>
+    </header> -->
     <!-- fin de encabezado-->
      
  <!-- pie de pagina-->
@@ -259,6 +215,7 @@
 
  <!-- fin de pie de pagina -->
     <main>
+        @include('pdf.headerCaratula')
         <div class="company-name">
             Flexico, S. de R.L. de C.V.
         </div>
@@ -389,6 +346,7 @@
 
         <!-- esto iria en mi segunda pagina  -->
     <div style="page-break-before: always;"></div>
+    @include('pdf.headerCaratula')
 
         <table style="margin-top: 110px;margin-left: auto;">
             <tr>
