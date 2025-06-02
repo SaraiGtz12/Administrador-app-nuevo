@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id('idServiceRequest');
             $table->unsignedTinyInteger('amount');
             $table->string('description');
-            $table->unsignedBigInteger('equipmentId');
+            $table->unsignedBigInteger('equipmentId')->nullable;
             $table->unsignedBigInteger('nomId');
             $table->unsignedBigInteger('serviceOrderId');
             $table->timestamps();

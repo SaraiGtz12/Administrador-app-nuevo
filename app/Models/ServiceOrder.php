@@ -8,6 +8,6 @@ class ServiceOrder extends Model
 {
     protected $table = "serviceOrders";
     protected $primaryKey = 'idServiceOrder';
-    protected $fillable = ['serviceOrder', 'AssignedTo', 'userId', 'clientId', 'addressId'];
+    protected $fillable = ['serviceOrder', 'responsible', 'phoneNumber', 'AssignedTo', 'userId', 'addressId'];
     public $timestamps = true;
 }

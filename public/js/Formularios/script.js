@@ -7,19 +7,27 @@ $(document).ready(function () {
         for (let i = 0; i < cantidad; i++) {
             let nuevoElemento = `
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <div class="mb-2">
                         <label class="form-label">Puntos o Equipos a Evaluar</label>
                         <input type="number" name="Puntos[]" class="form-control" required>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <div class="mb-2">
                         <label class="form-label">Tipo de Servicio (NOM)</label>
                         <select class="form-select" name="Servicio[]" required>
                             <option value="">Selecciona un Servicio</option>
                             <option value="1">NOM025</option>
                         </select>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-2">
+                        <div class="mb-4">
+                            <span>Descripción del Servicio</span>
+                            <textarea name="Descripcion" id="Descripcion_${i}" class="form-control" rows="3"></textarea>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -52,7 +60,7 @@ $(document).ready(function () {
                     let nuevoElemento = `
                     <div class="mb-2">
                         <label class="form-label">Muestreador</label>
-                        <select class="form-select" name="muestreador" id="muestreado_${i}">
+                        <select class="form-select" name="muestreador[]" id="muestreado_${i}">
                             ${options}
                         </select>
                     </div>

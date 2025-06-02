@@ -19,7 +19,7 @@ return new class extends Migration
             $table->unsignedBigInteger('rolId');
             $table->rememberToken();
 
-            $table->foreign('rolId')->references('idRol')->on('Roles')->onDelete('cascade');
+            $table->foreign('rolId')->references('idRol')->on('roles');
             
             $table->timestamps();
             

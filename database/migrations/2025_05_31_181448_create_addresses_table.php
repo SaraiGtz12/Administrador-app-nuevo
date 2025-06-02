@@ -18,7 +18,10 @@ return new class extends Migration
             $table->string('city');
             $table->string('state');
             $table->string('references');
+            $table->unsignedBigInteger('clientId');
             $table->timestamps();
+
+            $table->foreign('clientId')->references('idClient')->on('clients');
         });
     }
 
