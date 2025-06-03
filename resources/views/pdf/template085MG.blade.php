@@ -118,8 +118,6 @@
             padding: 5px;
             text-align: left;
         }
-
-
     </style>
 </head>
 
