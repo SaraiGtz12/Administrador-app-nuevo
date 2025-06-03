@@ -26,7 +26,7 @@ Route::get('generate085MG', [PdfController::class, 'generatePdf085MG']);
 Route::get('generate085G', [PdfController::class, 'generatePdf085G']);
 Route::get('generate085L', [PdfController::class, 'generatePdf085L']);
 Route::post('generate085MG', [PdfController::class, 'generatePdf085MG']);
-
+Route::post('generate085G', [PdfController::class, 'generatePdf085G']);
 
 Route::get('/search',[Vistas_Controller::class, 'Buscar'])->name('Buscar');
 Route::get('/servicios_registrados', [Vistas_Controller::class, 'VistaServiciosRegistrados'])->name('ServiciosRegistrados');
